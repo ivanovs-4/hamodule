@@ -18,8 +18,65 @@ extra-source-files:  CHANGELOG.md
 
 executable hamodule
   main-is:             Main.hs
-  -- other-modules:
-  -- other-extensions:
-  build-depends:       base >=4.12 && <4.13
   -- hs-source-dirs:
   default-language:    Haskell2010
+  -- other-modules:
+  -- other-extensions:
+  default-extensions:
+        ApplicativeDo
+        OverloadedStrings
+        RecordWildCards
+        TypeApplications
+
+        AutoDeriveTypeable
+        BangPatterns
+        BinaryLiterals
+        ConstraintKinds
+        DataKinds
+        DefaultSignatures
+        DeriveDataTypeable
+        DeriveFoldable
+        DeriveFunctor
+        DeriveGeneric
+        DeriveTraversable
+        DoAndIfThenElse
+        EmptyDataDecls
+        ExistentialQuantification
+        FlexibleContexts
+        FlexibleInstances
+        FunctionalDependencies
+        GADTs
+        GeneralizedNewtypeDeriving
+        InstanceSigs
+        KindSignatures
+        LambdaCase
+        MonadFailDesugaring
+        MultiParamTypeClasses
+        MultiWayIf
+        NamedFieldPuns
+        -- NoImplicitPrelude
+        OverloadedStrings
+        PartialTypeSignatures
+        PatternGuards
+        PolyKinds
+        RankNTypes
+        RecordWildCards
+        ScopedTypeVariables
+        StandaloneDeriving
+        TupleSections
+        TypeFamilies
+        TypeSynonymInstances
+        ViewPatterns
+
+        -- EmptyCase
+        -- TypeInType
+        -- TypeOperators
+
+  build-depends:       base >=4.12 && <4.13
+      , filepath
+      , bytestring
+      , lens
+      , megaparsec
+      , optparse-applicative
+      , split
+      , typed-process
