@@ -43,7 +43,7 @@ hamoduleMain HamoduleOps {..} = do
            (words "-0777 -i -pe")
         <> [
              "$M += "
-          <> "s/^(module\\s)\\s*\\S+\\s*?(\\s?\\(|where)/$1" <> modname <> "$2/m"
+          <> "s/^(module\\s)\\s*\\S+?(\\s*\\(|\\s+where)/$1" <> modname <> "$2/m"
           <> ";END{exit 1 unless $M>0}"
            , target
            ]
